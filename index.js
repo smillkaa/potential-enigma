@@ -21,6 +21,19 @@ const questions = () => { //maybe add a data paramater
         },
         {
             type: 'input',
+            name: 'email',
+            message: 'What is your email address? (Required)',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true
+                } else {
+                    console.log('Please enter your email address!')
+                    return false
+                }
+            }
+        },
+        {
+            type: 'input',
             name: 'title',
             message: 'What is the title of your project? (Required)',
             validate: titleInput => {
